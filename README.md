@@ -9,7 +9,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [https://github.com/j3rech0/faq-accordion](https://github.com/j3rech0/faq-accordion)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://faq-accordion-ten-eta.vercel.app/](https://faq-accordion-ten-eta.vercel.app/)
 
 ### Built with
 
