@@ -23,7 +23,6 @@ const styles = stylex.create({
     margin: 0,
     ":is([data-state='true'])": {
       opacity: 1,
-      height: "auto",
       paddingBottom: spacing['2'],
       animationName: scaleIn,
       animationDuration: "500ms",

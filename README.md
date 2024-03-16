@@ -8,7 +8,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/j3rech0/faq-accordion](https://github.com/j3rech0/faq-accordion)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ### Built with

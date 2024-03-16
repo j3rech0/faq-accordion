@@ -1,4 +1,4 @@
-import * as stylex from "@stylexjs/stylex";
+import stylex from "@stylexjs/stylex";
 
 export const tokens = stylex.defineVars({
   none: "#0000",

@@ -1,4 +1,4 @@
-import * as stylex from "@stylexjs/stylex";
+import stylex from "@stylexjs/stylex";
 import { mytheme } from "./theme.stylex.jsx";
 import { spacing, tokens } from "./tokens.stylex.jsx";
 
