@@ -1,0 +1,45 @@
+---
+const { title } = Astro.props;
+import Body from "../index.stylex.jsx";
+import p from "../../public/assets/images/icon-minus.svg"
+import m from "../../public/assets/images/icon-plus.svg"
+
+interface Props {
+  title: string;
+}
+
+const iconPlusSrc = `url('${p.src}')`;
+const iconMinusSrc = `url('${m.src}')`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  </head>
+    <Body>
+      <slot />
+    </Body>
+</html>
+
+<style is:global define:vars={{iconPlusSrc, iconMinusSrc}}>
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    overflow-y: scroll;
+  }
+ 
+  
+</style>

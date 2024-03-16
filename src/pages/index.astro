@@ -1,0 +1,41 @@
+---
+import * as stylex from "@stylexjs/stylex";
+import * as heading from "./index.md";
+import { getCollection } from "astro:content";
+
+import { styles } from "./index.stylex.jsx";
+import Layout from "../layouts/Layout.astro";
+import Accordion from "../components/Accordion/Accordion.astro";
+import TopBackground from "../components/TopBackground/index.astro";
+import star from "../../public/assets/images/icon-star.svg";
+
+const faqEntries = await getCollection("faq");
+---
+
+<Layout title="FAQs Accordion">
+  <main {...stylex.props(styles.main)}>
+    <TopBackground />
+    <section {...stylex.props(styles.section)}>
+      <div {...stylex.props(styles.content)}>
+        <header {...stylex.props(styles.header)}>
+          <h1 {...stylex.props(styles.h1)}>
+            <img {...stylex.props(styles.starimg)} src={star.src} alt="" />
+            {heading.frontmatter.title}
+          </h1>
+        </header>
+
+        <div {...stylex.props(styles.articlecontainer)}>
+          {
+            faqEntries.map((faqPost) => (
+              <Accordion
+                title={faqPost.data.title}
+                description={faqPost.data.description}
+                isactive={faqPost.data.isactive}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

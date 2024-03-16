@@ -1,0 +1,47 @@
+---
+import Buttons from "../Button/Button.stylex";
+import Article, { Paragraph, H3 } from "./Article.stylex.jsx";
+
+const { title, description, isactive } = Astro.props;
+---
+
+<Article aria-label={isactive ? "Open" : "Closed"}>
+  {
+    title && (
+      <H3>
+        {title}
+        <Buttons aria-expanded={isactive} data-toggle aria-label="toggle" />
+      </H3>
+    )
+  }
+  <Paragraph data-state={isactive}>{description}</Paragraph>
+</Article>
+
+<script>
+  const buttons = document.querySelectorAll("[data-toggle]");
+
+  function thisEvent(e: Element) {
+    const parent = e.parentElement?.parentElement;
+    const paragraph = parent?.querySelector(":scope p");
+    const parentAttr = parent?.getAttribute("aria-label");
+    const btnAttr = e.getAttribute("aria-expanded");
+    const paragraphAttr = paragraph?.getAttribute("data-state");
+
+    btnAttr === "true"
+      ? e.setAttribute("aria-expanded", "false")
+      : e.setAttribute("aria-expanded", "true");
+
+    parentAttr === "Open"
+      ? parent?.setAttribute("aria-label", "Closed")
+      : parent?.setAttribute("aria-label", "Open");
+
+    paragraphAttr === "true"
+      ? paragraph?.setAttribute("data-state", "false")
+      : paragraph?.setAttribute("data-state", "true");
+
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => thisEvent(button));
+  });
+</script>

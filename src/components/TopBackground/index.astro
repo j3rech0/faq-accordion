@@ -1,0 +1,16 @@
+---
+import * as stylex from "@stylexjs/stylex";
+import { styles } from "./index.stylex.jsx";
+import { Image } from "astro:assets";
+import topVector from "../../../public/assets/images/background-pattern-desktop.svg";
+---
+
+<div {...stylex.props(styles.topbg)}>
+  <Image
+    {...stylex.props(styles.img)}
+    src={topVector}
+    alt=""
+    widths={[240, 540, 720, topVector.width]}
+    sizes={`(min-width: 768px) 1000px, (min-width: 1440px) 1440px, ${topVector.width}px`}
+  />
+</div>
