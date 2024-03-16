@@ -1,5 +1,5 @@
 import stylex from "@stylexjs/stylex";
-import { radius, tokens, container, spacing } from "../tokens.stylex";
+import { radius, tokens, container, spacing } from "../tokens.stylex.jsx";
 
 const DESKTOP = "@media (min-width: 768px)";
 
