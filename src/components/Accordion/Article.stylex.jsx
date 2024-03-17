@@ -23,7 +23,7 @@ const styles = stylex.create({
     margin: 0,
     ":is([data-state='true'])": {
       opacity: 1,
-      paddingBottom: spacing['2'],
+      paddingBottom: spacing["2"],
       animationName: scaleIn,
       animationDuration: "500ms",
       height: container.full,
@@ -40,6 +40,8 @@ const styles = stylex.create({
     zIndex: spacing.none,
     paddingRight: spacing["4"],
     color: tokens.primaryText,
+    fontSize: spacing["0"],
+    marginBottom: spacing["5"],
   },
 });
 

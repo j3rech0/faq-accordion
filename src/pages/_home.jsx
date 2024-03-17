@@ -21,13 +21,13 @@ export const styles = stylex.create({
   content: {
     backgroundColor: tokens.secondaryBackground,
     borderRadius: radius.radius1,
-    marginTop: -120,
+    marginTop: -130,
     padding: spacing["2"],
     position: "relative",
     maxWidth: container.max,
     marginInline: spacing["2"],
     paddingBlock: spacing["4"],
-    paddingInline: spacing["3"],
+    paddingInline: spacing["4"],
   },
   header: {
     width: "100%",
@@ -35,7 +35,7 @@ export const styles = stylex.create({
   },
   h1: {
     color: tokens.primaryText,
-    fontSize: { default: spacing["3"], [DESKTOP]: spacing["4"] },
+    fontSize: { default: spacing["3"], [DESKTOP]: spacing["7"] },
     margin: spacing.none,
     display: "flex",
     alignItems: "center",

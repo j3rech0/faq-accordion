@@ -1,8 +1,6 @@
 import stylex from "@stylexjs/stylex";
 import { tokens } from "./tokens.stylex.jsx";
 
-const COLORSCHEME = "@media (prefers-color-scheme: light)";
-
 const colors = {
   white: tokens.white,
   lightPink: tokens.lightPink,
@@ -17,8 +15,8 @@ const colors = {
 };
 
 export const mytheme = stylex.createTheme(tokens, {
-  primaryText: { default: colors.darkPurple, [COLORSCHEME]: colors.lightPurple },
+  primaryText: colors.darkPurple,
   secondaryText: colors.grayishPurple,
-  primaryBackground: { default: colors.lightPink, [COLORSCHEME]: colors.darkPink },
-  secondaryBackground: { default: colors.white, [COLORSCHEME]: colors.black },
+  primaryBackground: colors.lightPink,
+  secondaryBackground: colors.white,
 });

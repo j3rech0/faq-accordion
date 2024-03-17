@@ -4,13 +4,13 @@ import { spacing, tokens } from "../../tokens.stylex";
 const styles = stylex.create({
   button: {
     color: tokens.none,
-    padding: spacing['1'],
+    padding: spacing["1"],
     cursor: "pointer",
     width: "100%",
     zIndex: 2,
     background: tokens.none,
     position: "absolute",
-    right: spacing['3'],
+    right: spacing["3"],
     border: tokens.none,
     ":hover::before": {
       backgroundColor: tokens.primaryText,
@@ -24,8 +24,8 @@ const styles = stylex.create({
       maskPosition: "center",
       top: -4,
       right: -30,
-      width: spacing['3'],
-      height: spacing['3'],
+      width: spacing["3"],
+      height: spacing["3"],
     },
     ":is([aria-expanded=true])::before": {
       maskImage: "var(--iconPlusSrc)",

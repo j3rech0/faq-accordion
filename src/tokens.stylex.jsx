@@ -19,6 +19,9 @@ const size = {
   medium: "20px",
   large: "30px",
   xlarge: "40px",
+  xmedium: "15px",
+  xxmedium: "25px",
+  xxlarge: "50px",
 };
 
 export const spacing = stylex.defineVars({
@@ -28,13 +31,16 @@ export const spacing = stylex.defineVars({
   2: size.medium,
   3: size.large,
   4: size.xlarge,
+  5: size.xmedium,
+  6: size.xxmedium,
+  7: size.xxlarge,
 });
 
 export const container = stylex.defineVars({
   full: "100%",
-  max: "540px",
+  max: "460px",
 });
 
 export const radius = stylex.defineVars({
-  radius1: size.medium,
+  radius1: size.xmedium,
 });
