@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && cd /var/ftp && ls -la",
+    "build": "astro check && astro build && cd /vercel && ls -la",
     "preview": "astro preview",
     "astro": "astro"
   },
